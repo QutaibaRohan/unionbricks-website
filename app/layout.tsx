@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Ruda } from "next/font/google";
 import "./globals.css";
-
-const ruda = Ruda({ subsets: ["latin"] });
+import { ruda } from "@/config/fonts";
 
 export const metadata: Metadata = {
   title: "Union Bricks Company",

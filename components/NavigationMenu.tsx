@@ -18,7 +18,7 @@ const NavigationMenu = ({ menuItems }: Props) => {
       />
       <menu className="flex self-center h-1/2 gap-8 mr-16">
         {menuItems.map((item) => (
-          <li className="border-l-2 border-cyan-50" key={item.id}>
+          <li className="border-l-2 border-cyan-50 font-normal" key={item.id}>
             <a className="pl-2" href={item.link}>
               {item.label}
             </a>
