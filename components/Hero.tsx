@@ -1,12 +1,12 @@
 import Image from "next/image"
 import React from "react"
 import { descriptions, titles } from "@/constants"
-import heroImage from "@/assets/hero.png"
+import { hero } from "@/assets"
 
 const Hero = () => {
 	return (
 		<div className="relative h-screen">
-			<Image src={heroImage} alt="Hero Image" layout="fill" objectFit="cover" quality={100} />
+			<Image src={hero} alt="Hero Image" layout="fill" objectFit="cover" quality={100} />
 			<article className="absolute top-1/3 ml-16 w-1/2">
 				<h1 className="text-7xl font-black text-white">{titles.HERO}</h1>
 				<p className="text-xl font-normal text-white pt-4 pr-40 text-wrap">{descriptions.HERO}</p>
