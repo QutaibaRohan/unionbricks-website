@@ -2,7 +2,7 @@ import React from "react"
 import Scaffold from "./Scaffold"
 import Card from "./Card"
 import { descriptions, titles } from "@/constants"
-import { greenKiln } from "@/assets"
+import { greenKiln, iloApproved } from "@/assets"
 
 const Articles = () => {
 	return (
@@ -12,13 +12,33 @@ const Articles = () => {
 			backgroundColor="bg-black"
 			textColor="text-white"
 		>
-			<Card
-				title="Pakistan's First Green Brick Kiln"
-				description="Union Bricks in Pakistan is proud to be the country's first green brick kiln, revolutionising the brick-making industry"
-				buttonLabel="SEE MORE"
-				buttonLink="/"
-				image={greenKiln}
-			/>
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+				<Card
+					title="Pakistan's First Green Brick Kiln"
+					description="Union Bricks in Pakistan is proud to be the country's first green brick kiln, revolutionising the brick-making industry"
+					buttonLabel="SEE MORE"
+					buttonLink="/"
+					image={greenKiln}
+					bordered={false}
+				/>
+				<Card
+					title="Pakistan's First ILO Approved"
+					description="Union Bricks in Pakistan is proud to be the country's first Internation Labor Organization approved bricks manufacturer"
+					buttonLabel="SEE MORE"
+					buttonLink="/"
+					image={iloApproved}
+					bordered={false}
+				/>
+				<Card
+					title="Pakistan's First Green Brick Kiln"
+					description="Union Bricks in Pakistan is proud to be the country's first green brick kiln, revolutionising the brick-making industry"
+					buttonLabel="SEE MORE"
+					buttonLink="/"
+					image={greenKiln}
+					bordered={false}
+				/>
+				{/* Add more Card components here */}
+			</div>
 		</Scaffold>
 	)
 }

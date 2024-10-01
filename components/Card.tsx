@@ -13,18 +13,29 @@ interface Props {
 
 const Card = ({ title, description, buttonLabel, buttonLink, image, bordered, priceTag }: Props) => {
 	return (
-		<article className={bordered ? `border rounded block` : "rounded-md block"}>
-			<Image src={image} alt="Hero Image" className="h-64 w-full object-cover sm:h-80 lg:h-96 rounded-md" />
+		<article className={`relative rounded-lg w-[400px] h-[550px]  ${bordered && "border border-gray-200"}`}>
+			<Image src={image} alt={title} layout="responsive" objectFit="cover" className="w-full h-full" />
 
-			<h3 className="mt-4 text-lg font-black text-white sm:text-xl">{title}</h3>
-			<p className="mt-2 max-w-sm text-white font-normal">{description}</p>
-			<div className="flex bg-transparent">
-				{priceTag && <span className="mt-2 text-white font-bold">{priceTag}</span>}
-				{buttonLabel && (
-					<a href={buttonLink} className="mt-2 ml-auto text-white font-bold">
-						{buttonLabel}
-					</a>
-				)}
+			<div className={`absolute bottom-4 left-0 right-0 p-4 rounded-2xl ${!bordered && "bg-neutral-800/90"}`}>
+				<h3 className={`text-lg md:text-xl font-black ${bordered ? "text-black" : "text-white"} mb-2`}>
+					{title}
+				</h3>
+				<p className={`text-xs md:text-sm ${bordered ? "text-gray-600" : "text-gray-200"} mb-4`}>
+					{description}
+				</p>
+				<div className="flex items-end justify-between">
+					{priceTag && <span className="text-base md:text-lg font-bold text-black my-2">{priceTag}</span>}
+					{buttonLabel && (
+						<a
+							href={buttonLink}
+							className="px-3 py-1 md:px-4 md:py-2 text-sm md:text-base rounded-xl
+								bg-black text-white hover:bg-white hover:text-black 
+								transition-colors duration-300 ml-auto my-2"
+						>
+							{buttonLabel}
+						</a>
+					)}
+				</div>
 			</div>
 		</article>
 	)
