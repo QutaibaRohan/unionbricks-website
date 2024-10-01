@@ -8,7 +8,7 @@ interface Props {
 	children: React.ReactNode
 }
 
-const Scaffold: React.FC<Props> = ({ title, description, children, backgroundColor, textColor }) => {
+const Scaffold = ({ title, description, children, backgroundColor, textColor }: Props) => {
 	return (
 		<div className={`flex flex-col min-h-screen ${backgroundColor} ${textColor}`}>
 			<main className="flex-grow">

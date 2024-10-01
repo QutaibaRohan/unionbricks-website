@@ -1,6 +1,8 @@
 import React from "react"
 import Scaffold from "./Scaffold"
+import Card from "./Card"
 import { descriptions, titles } from "@/constants"
+import { greenKiln } from "@/assets"
 
 const Articles = () => {
 	return (
@@ -10,7 +12,13 @@ const Articles = () => {
 			backgroundColor="bg-black"
 			textColor="text-white"
 		>
-			<p>Here comes articles</p>
+			<Card
+				title="Pakistan's First Green Brick Kiln"
+				description="Union Bricks in Pakistan is proud to be the country's first green brick kiln, revolutionising the brick-making industry"
+				buttonLabel="SEE MORE"
+				buttonLink="/"
+				image={greenKiln}
+			/>
 		</Scaffold>
 	)
 }
