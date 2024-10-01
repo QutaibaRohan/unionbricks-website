@@ -13,24 +13,24 @@ interface Props {
 
 const Card = ({ title, description, buttonLabel, buttonLink, image, bordered, priceTag }: Props) => {
 	return (
-		<article className={`relative rounded-lg w-[400px] h-[550px]  ${bordered && "border border-gray-200"}`}>
-			<Image src={image} alt={title} layout="responsive" objectFit="cover" className="w-full h-full" />
+		<article
+			className={`relative w-[calc(100%-1rem)] sm:w-[calc(50%-1.5rem)] md:w-[calc(33.33%-2rem)] lg:w-[400px] max-w-[400px] h-[calc(100vh-2rem)] sm:h-[calc(50vh-1.5rem)] md:h-[calc(33.33vh-1rem)] lg:h-[500px] max-h-[500px] ${
+				bordered && "border border-gray-200"
+			} rounded-lg overflow-hidden`}
+		>
+			<Image src={image} alt={title} layout="fill" objectFit="cover" />
 
-			<div className={`absolute bottom-4 left-0 right-0 p-4 rounded-2xl ${!bordered && "bg-neutral-800/90"}`}>
-				<h3 className={`text-lg md:text-xl font-black ${bordered ? "text-black" : "text-white"} mb-2`}>
-					{title}
-				</h3>
-				<p className={`text-xs md:text-sm ${bordered ? "text-gray-600" : "text-gray-200"} mb-4`}>
-					{description}
-				</p>
-				<div className="flex items-end justify-between">
-					{priceTag && <span className="text-base md:text-lg font-bold text-black my-2">{priceTag}</span>}
+			<div className={`absolute bottom-0 left-0 right-0 p-4 ${!bordered && "bg-neutral-800/90"}`}>
+				<h3 className={`text-lg font-bold ${bordered ? "text-black" : "text-white"} mb-2`}>{title}</h3>
+				<p className={`text-sm ${bordered ? "text-gray-600" : "text-gray-200"} mb-4`}>{description}</p>
+				<div className="flex items-center justify-between">
+					{priceTag && <span className="text-base font-bold text-black">{priceTag}</span>}
 					{buttonLabel && (
 						<a
 							href={buttonLink}
-							className="px-3 py-1 md:px-4 md:py-2 text-sm md:text-base rounded-xl
-								bg-black text-white hover:bg-white hover:text-black 
-								transition-colors duration-300 ml-auto my-2"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="px-3 py-1 mb-2 mt-4 text-sm rounded-xl bg-black text-white hover:bg-white hover:text-black transition-colors duration-300"
 						>
 							{buttonLabel}
 						</a>

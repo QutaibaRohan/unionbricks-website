@@ -12,13 +12,13 @@ const Products = () => {
 			backgroundColor="bg-white"
 			textColor="text-black"
 		>
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
 				<Card
 					title="Awal"
 					description="Introducing Awal: a radiant fusion of tradition and innovation, this product ignites your senses with its rich blend of heritage-inspired design and cutting-edge technology. Crafted with meticulous attention to detail"
 					buttonLabel="PURCHASE"
 					priceTag="PKR 20,500/-"
-					buttonLink="/"
+					buttonLink="https://wa.me/923000323230"
 					image={awal}
 					bordered={true}
 				/>
@@ -27,7 +27,7 @@ const Products = () => {
 					description="Introducing Laal Awal: a radiant fusion of tradition and innovation, this product ignites your senses with its rich blend of heritage-inspired design and cutting-edge technology. Crafted with meticulous attention to detail"
 					buttonLabel="PURCHASE"
 					priceTag="PKR 18,500/-"
-					buttonLink="/"
+					buttonLink="https://wa.me/923000323230"
 					image={laalAwal}
 					bordered={true}
 				/>
@@ -36,7 +36,7 @@ const Products = () => {
 					description="Introducing Doum: a radiant fusion of tradition and innovation, this product ignites your senses with its rich blend of heritage-inspired design and cutting-edge technology. Crafted with meticulous attention to detail"
 					buttonLabel="PURCHASE"
 					priceTag="PKR 16,500/-"
-					buttonLink="/"
+					buttonLink="https://wa.me/923000323230"
 					image={awal}
 					bordered={true}
 				/>

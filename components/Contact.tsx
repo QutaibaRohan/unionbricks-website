@@ -37,7 +37,7 @@ const Contact = () => {
 					<MapComponent />
 				</div>
 			</div>
-			<div className="mt-12 flex justify-center space-x-4">
+			<div className="mt-32 flex justify-center space-x-4">
 				<a href="https://wa.me/923000323230" target="_blank" rel="noopener noreferrer">
 					<FaWhatsapp className="text-4xl text-black hover:text-gray-800 cursor-pointer" />
 				</a>
@@ -51,7 +51,7 @@ const Contact = () => {
 					<FaTwitter className="text-4xl text-black hover:text-gray-800 cursor-pointer" />
 				</a>
 			</div>
-			<p className="text-center mt-8 text-sm text-black">
+			<p className="text-center mt-8 text-xs text-black">
 				Copyright © 2024 Union Bricks. All rights reserved. Web design by algosnest
 			</p>
 		</Scaffold>

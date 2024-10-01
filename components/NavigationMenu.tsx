@@ -1,6 +1,8 @@
-import Image from "next/image"
+import dynamic from "next/dynamic"
 import React from "react"
-import { logo } from "@/assets"
+
+const MobileNavigationMenu = dynamic(() => import("./MobileNavigationMenu"), { ssr: false })
+const DesktopNavigationMenu = dynamic(() => import("./DesktopNavigationMenu"))
 
 interface Props {
 	menuItems: { id: string; link: string; label: string }[]
@@ -8,18 +10,14 @@ interface Props {
 
 const NavigationMenu = ({ menuItems }: Props) => {
 	return (
-		<nav className="flex justify-between w-full">
-			<Image src={logo} alt="UBC" width={200} height={200} className="py-4 ml-16" />
-			<menu className="flex self-center h-1/2 gap-8 mr-16">
-				{menuItems.map(item => (
-					<li className="border-l-2 border-cyan-50 font-normal" key={item.id}>
-						<a className="pl-2" href={`#${item.link}`}>
-							{item.label}
-						</a>
-					</li>
-				))}
-			</menu>
-		</nav>
+		<>
+			<div className="sm:hidden">
+				<MobileNavigationMenu menuItems={menuItems} />
+			</div>
+			<div className="hidden sm:block">
+				<DesktopNavigationMenu menuItems={menuItems} />
+			</div>
+		</>
 	)
 }
 
