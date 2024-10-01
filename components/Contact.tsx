@@ -41,13 +41,13 @@ const Contact = () => {
 				<a href="https://wa.me/923000323230" target="_blank" rel="noopener noreferrer">
 					<FaWhatsapp className="text-4xl text-black hover:text-gray-800 cursor-pointer" />
 				</a>
-				<a href="https://www.facebook.com/unionbricks" target="_blank" rel="noopener noreferrer">
+				<a href="https://www.facebook.com/Unionbricksco" target="_blank" rel="noopener noreferrer">
 					<FaFacebookF className="text-4xl text-black hover:text-gray-800 cursor-pointer" />
 				</a>
-				<a href="https://www.instagram.com/unionbricks" target="_blank" rel="noopener noreferrer">
+				<a href="https://www.instagram.com/unionbrickscompany" target="_blank" rel="noopener noreferrer">
 					<FaInstagram className="text-4xl text-black hover:text-gray-800 cursor-pointer" />
 				</a>
-				<a href="https://twitter.com/unionbricks" target="_blank" rel="noopener noreferrer">
+				<a href="https://twitter.com/unionbrickscompany" target="_blank" rel="noopener noreferrer">
 					<FaTwitter className="text-4xl text-black hover:text-gray-800 cursor-pointer" />
 				</a>
 			</div>
